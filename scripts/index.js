@@ -32,7 +32,7 @@ function deleteCard(cardElement) {
 
 // @todo: Вывести карточки на страницу
 initialCards.forEach((element) => {
-  createCard(element, deleteCard);
-  // добавляем карточку в конец списка карточек
+  const cardElement = createCard(element, deleteCard);
+// добавляем карточку в конец списка карточек
   placesList.append(cardElement);
 });
