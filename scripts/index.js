@@ -22,9 +22,6 @@ function createCard(card, deleteCardCallBack) {
     deleteCardCallBack(cardElement);
   });
 
-  // добавляем карточку в конец списка карточек
-  placesList.append(cardElement);
-
   return cardElement;
 }
 
@@ -36,4 +33,6 @@ function deleteCard(cardElement) {
 // @todo: Вывести карточки на страницу
 initialCards.forEach((element) => {
   createCard(element, deleteCard);
+  // добавляем карточку в конец списка карточек
+  placesList.append(cardElement);
 });
