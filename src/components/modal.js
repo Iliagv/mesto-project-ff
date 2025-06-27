@@ -16,8 +16,8 @@ export function closePopup(popupElement) {
 
 // Function for closing popup by Escape
 export function closePopupByEscape(evt) {
-  const openedPopup = document.querySelector(".popup_is-opened");
   if (evt.key === "Escape") {
+    const openedPopup = document.querySelector(".popup_is-opened");
     closePopup(openedPopup);
   }
 }

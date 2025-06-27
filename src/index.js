@@ -68,7 +68,7 @@ profileEditButton.addEventListener("click", function () {
 });
 
 // Обработчик «отправки» формы профиля
-function handleFormSubmit(evt) {
+function handleProfileFormSubmit(evt) {
   evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы
 
   profileTitle.textContent = nameInput.value;
@@ -78,7 +78,7 @@ function handleFormSubmit(evt) {
 }
 
 // Прикрепляем обработчик к форме: он будет следить за событием “submit” - «отправка»
-editProfileForm.addEventListener("submit", handleFormSubmit);
+editProfileForm.addEventListener("submit", handleProfileFormSubmit);
 
 // Обработчик «отправки» формы добавления карточки
 function handleCardFormSubmit(evt) {
@@ -93,6 +93,7 @@ function handleCardFormSubmit(evt) {
 
   placesList.prepend(newCard);
   closePopup(newCardPopup); // для автоматического закрытия попапа
+  newCardForm.reset(); // очищаем форму 
 }
 
 // Прикрепляем обработчик к форме: он будет следить за событием “submit” - «отправка»
@@ -106,6 +107,7 @@ profileAddButton.addEventListener("click", function () {
 // Function for image popup opening
 function openImagePopup(card) {
   imagePopupPicture.src = card.link;
+  imagePopupPicture.alt = card.name;
   imagePopupCaption.textContent = card.name;
 
   openPopup(imagePopup);
