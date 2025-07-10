@@ -25,3 +25,31 @@
 .popup_type_image {
   background-color: rgba(0, 0, 0, .9);
 }
+
+.popup__input_type_error {
+  border-bottom: 1px solid #ff0000;
+}
+
+.popup__error {
+  color: #ff0000;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 5px;
+  min-height: 15px;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.popup__error_visible {
+  opacity: 1;
+}
+
+.popup__input-container {
+  position: relative;
+  margin-block-end: 40px;
+}
+
+.popup__input-container .popup__error{
+  position: absolute;
+}
