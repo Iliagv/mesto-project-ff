@@ -14,9 +14,6 @@ import {
 const places = document.querySelector(".places");
 const profile = document.querySelector(".profile");
 
-// Card template 
-export const cardTemplate = document.querySelector("#card-template").content;
-
 // Cписок карточек
 const placesList = places.querySelector(".places__list");
 
@@ -103,8 +100,6 @@ function handleProfileFormSubmit(evt) {
     .finally(() => {
       submitButton.textContent = originalText;
     });
-
-  closePopup(editPopup); // для автоматического закрытия попапа
 }
 
 // Прикрепляем обработчик к форме: он будет следить за событием “submit” - «отправка»
@@ -152,8 +147,8 @@ newCardForm.addEventListener("submit", handleCardFormSubmit);
 
 // Add new card popup opening by listener
 profileAddButton.addEventListener("click", function () {
-  clearValidation(newCardForm, validationConfig); // очищаем валидацию формы 
   newCardForm.reset(); // очищаем форму 
+  clearValidation(newCardForm, validationConfig); // очищаем валидацию формы 
   
   openPopup(newCardPopup);
 });

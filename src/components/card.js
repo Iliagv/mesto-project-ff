@@ -1,4 +1,6 @@
-import { cardTemplate } from "../index.js";
+// Card template 
+const cardTemplate = document.querySelector("#card-template").content;
+
 import { deleteCard, likeCard, unlikeCard } from "./api.js";
 
 // Function to create a card
